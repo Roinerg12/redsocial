@@ -1,0 +1,8 @@
+- name = "Roiner Villarreal"
+h1 Bienvenido a la página
+p
+  Estamos usando Slim #{name}
+- if user_signed_in?
+  = link_to 'Cerrar sesión', destroy_user_session_path, method: :delete
+-else
+  a(href="#{new_user_session_path}") Iniciar sessión

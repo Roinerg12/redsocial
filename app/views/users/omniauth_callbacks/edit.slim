@@ -1,0 +1,17 @@
+= form_with scope: :user, local: true, url: "/custom_sign_up", method: :post do |form|
+  ul
+    - @user.errors.full_messages.each do |error|
+      li =error
+  div
+    =form.label :usermane
+    =form.text_field :username
+  div
+    =form.label :email
+    =form.email_field :email
+  divra
+    =form.label :name
+    =form.text_field :name
+  div
+    = form.submit 'Completar registro'
+
+    
